@@ -1,12 +1,14 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
+  "extends": "next/core-web-vitals",
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "tailwindcss"],
+      "plugins": ["@typescript-eslint", "tailwindcss", "prettier"],
       "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
         "plugin:tailwindcss/recommended",
-        "plugin:prettier/recommended"
+        "next/core-web-vitals"
       ],
       "parserOptions": {
         "project": "./tsconfig.json"
@@ -18,7 +20,6 @@
         "react/require-default-props": "off",
         "react/jsx-props-no-spreading": "off",
         "@next/next/no-img-element": "off",
-        "@typescript-eslint/comma-dangle": "on",
         "@typescript-eslint/consistent-type-imports": "warn",
         "no-restricted-syntax": [
           "warn",
@@ -26,9 +27,7 @@
           "LabeledStatement",
           "WithStatement"
         ],
-        "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports": "warn",
-        "unused-imports/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+        "@typescript-eslint/no-unused-vars": "off"
       }
     }
   ]
