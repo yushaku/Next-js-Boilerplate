@@ -1,7 +1,5 @@
-const withMT = require('@material-tailwind/react/utils/withMT')
-
 /** @type {import('tailwindcss').Config} */
-module.exports = withMT({
+module.exports = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -29,7 +27,7 @@ module.exports = withMT({
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        inter: ['Inter', 'sans-serif']
+        abril: ['Abril Fatface', 'sans-serif']
       },
       colors: {
         primary: '#2190FF',
@@ -75,4 +73,4 @@ module.exports = withMT({
     }
   },
   plugins: [require('tailwindcss-animated')]
-})
+}
